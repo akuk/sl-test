@@ -1,0 +1,19 @@
+{
+
+	"userId": { "type": "string", "format": "uuid" },
+	"courseId": { "type": "string", "format": "uuid" },
+	"sessionId": { "type": "string", "format": "uuid" },
+
+	"session_stats": {
+		"additionalProperties": false,
+		"removeAdditional": "failing",
+		"type": "object",
+		"required": [ "sessionId", "totalModulesStudied", "averageScore", "timeStudied" ],
+		"properties": {
+			"sessionId": { "type": "string", "format": "uuid" },
+			"totalModulesStudied": { "type": "integer" },
+			"averageScore": { "type": "number" },
+			"timeStudied": { "type": "integer" }
+		}
+	}
+}
